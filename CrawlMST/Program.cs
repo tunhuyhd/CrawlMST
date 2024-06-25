@@ -17,6 +17,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Register CrawlService
 builder.Services.AddScoped<CrawlService>();
 
+// Register CrawlHostedService
+builder.Services.AddHostedService<CrawlHostedService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

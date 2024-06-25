@@ -20,7 +20,7 @@ public class CompaniesController : ControllerBase
     [HttpPost("crawl")]
     public async Task<IActionResult> CrawlData([FromBody] CrawlRequest request)
     {
-        await _crawlService.CrawlAndSaveDataAsync(request.Tinh, request.PageNumber);
+        await _crawlService.CrawlAndSaveAllDataAsync(request.Tinh);
         return Ok();
     }
 }
